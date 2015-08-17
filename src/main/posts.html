@@ -1,0 +1,28 @@
+<ul class="blog-categories" ng-init="main.selected_category = mp.selected_category">
+  <li ng-class="{active: main.selected_category == 'All'}"><a href="/">All</a></li>
+  <li ng-repeat="category in main.categories" ng-class="{active: main.selected_category == category.slug}"><a href="/tag/{{category.slug}}">{{category.name}}</a></li>
+</ul>
+<div class="blog-list" infinite-scroll="mp.loadData()">
+  <div class="row">
+    <div class="col-lg-6 col-md-6" ng-repeat="post in mp.posts">
+      <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" class="blog" ng-sr>
+        <div>
+          <img class="img-responsive" ng-src="{{post.featured_image.source}}" />
+          <div class="title" ng-style="{'background-color': post.meta.post_color}">
+            <div>
+              <h4>{{post.title}}</h4>
+              <p>{{post.excerpt}}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12">
+      <div class="post-loading" ng-show="mp.loading">
+        <i class="icon ion-load-c spin"></i>
+        <br>
+        Loading..
+      </div>
+    </div>
+  </div>
+</div>

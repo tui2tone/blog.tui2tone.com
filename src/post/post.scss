@@ -1,0 +1,45 @@
+.post-header {
+  padding: 35px;
+  padding-top: 100px;
+  min-height: 350px;
+  background-image: url("/images/header_bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  box-shadow: 0 1px -2px #333;
+  text-align: center;
+}
+
+.post-container {
+  padding: 25px 10px;
+  padding-bottom: 150px;
+  .post-title {
+
+    h3 {
+        font-size: 2.5em;
+        color: #48AD01;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    .post-date {
+      font-size: 0.9em;
+    }
+  }
+
+  .post-content {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-container {
+    padding-bottom: 210px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ng-boilerplate",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-file": "*",
+    "gulp-sass": "*",
+    "gulp-watch": "*",
+    "gulp-coffee": "*",
+    "gulp-ng-annotate": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-angular-templatecache": "*",
+    "gulp-concat-css":"*"
+  },
+  "private": true
+}

@@ -1,0 +1,14 @@
+<div class="jumbotro post-header" data-stellar-background-ratio="0.5" style="background-image: url({{post.data.featured_image.source}})">
+</div>
+<div class="container">
+  <div class="post-container">
+    <div class="post-title">
+      <h3>{{post.data.title}}</h3>
+      <h4>{{post.data.excerpt}}</h4>
+      <p class="post-date">{{post.data.date | date: "dd MMM yyyy HH:mm"}}</p>
+    </div>
+    <div class="post-content" ng-bind-html="post.data.content">
+
+    </div>
+  </div>
+</div>
