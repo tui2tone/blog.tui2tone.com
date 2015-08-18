@@ -1,14 +1,14 @@
 angular.module "app"
   .factory "Post", ($http,$q,$rootScope) ->
     getPosts = (params) ->
-      params.posts_per_page = 10
       delay = $q.defer()
       get_param_s = []
       angular.forEach params, (val,key) ->
         if key == "page"
           get_param_s.push(key + "=" + val)
         else
-        get_param_s.push("filter[" + key + "]=" + val)
+          get_param_s.push("filter[" + key + "]=" + val)
+          
       $http.get('/wp-json/posts?' + get_param_s.join("&"))
         .success (data) ->
           delay.resolve(data)

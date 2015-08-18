@@ -79,8 +79,8 @@ function run_production() {
 	add_action( 'wp_enqueue_scripts', 'app_script_minify' );
 }
 
-// run_dev();
-run_production();
+run_dev();
+// run_production();
 
 // config
 add_theme_support( 'post-thumbnails' );
