@@ -4,8 +4,8 @@
 </ul>
 <div class="blog-list" infinite-scroll="mp.loadData()">
   <div class="row">
-    <div class="col-lg-6 col-md-6" ng-repeat="post in mp.posts">
-      <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" class="blog" ng-sr>
+    <div class="col-lg-6 col-md-6" ng-repeat="post in mp.posts ">
+      <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" class="blog animated fadeInUp" style="animation-delay: {{post.delay}}s">
         <div>
           <img class="img-responsive" ng-src="{{post.featured_image.source}}" />
           <div class="title" ng-style="{'background-color': post.meta.post_color}">
@@ -18,7 +18,7 @@
       </a>
     </div>
     <div class="col-xs-12">
-      <div class="post-loading" ng-show="mp.loading">
+      <div class="post-loading animated fadeInDown" ng-show="mp.loading">
         <i class="icon ion-load-c spin"></i>
         <br>
         Loading..

@@ -11,7 +11,10 @@
     "gulp-notify": "*",
     "gulp-plumber": "*",
     "gulp-angular-templatecache": "*",
-    "gulp-concat-css":"*"
+    "gulp-concat":"*",
+    "gulp-uglify": "*",
+    "gulp-minify-css": "*",
+    "run-sequence": "*"
   },
   "private": true
 }

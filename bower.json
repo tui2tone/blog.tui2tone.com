@@ -16,6 +16,7 @@
     "ng-parallax": "latest",
     "bootstrap": "latest",
     "scrollReveal.js": "latest",
+    "fox-angular-scrollReveal.js": "latest",
     "ngInfiniteScroll": "latest",
     "ionicons": "latest",
     "angular-scroll": "latest",

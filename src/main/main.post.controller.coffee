@@ -32,8 +32,11 @@ angular.module "app"
       if vm.paging.page > 1
         params.page = vm.paging.page
       $state.go($state.current, params, notify: false);
+      delay = 0
       angular.forEach data, (val) ->
+        val.delay = delay
         vm.posts.push val
+        delay += 0.1
 
     vm.loadData = ->
       if !vm.paging.loaded && !vm.loading

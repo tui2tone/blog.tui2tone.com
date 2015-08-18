@@ -1,7 +1,6 @@
 <?php
 function vendor_scripts() {
 	wp_enqueue_script('jquery',get_stylesheet_directory_uri() . '/bower_components/jquery/dist/jquery.min.js');
-	wp_enqueue_script('scroll-reveal',get_stylesheet_directory_uri() . '/bower_components/scrollReveal.js/dist/scrollReveal.min.js');
 	wp_enqueue_script('moment',get_stylesheet_directory_uri() . '/bower_components/moment/moment.js');
 	wp_enqueue_script('bootstrap',get_stylesheet_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js');
 	wp_enqueue_script('angularjs',get_stylesheet_directory_uri() . '/bower_components/angular/angular.min.js');
@@ -28,8 +27,6 @@ function app_styles() {
 }
 
 function app_scripts() {
-	// Directive
-	wp_enqueue_script('ngScrollReveal',get_stylesheet_directory_uri() . '/app/directives/ngScrollReveal.js');
 
 	// App
 	wp_enqueue_script('app',get_stylesheet_directory_uri() . '/app/app.js');
@@ -50,10 +47,40 @@ function app_scripts() {
 	wp_enqueue_script('post.controllers',get_stylesheet_directory_uri() . '/app/post/post.controller.js');
 }
 
-add_action( 'wp_enqueue_scripts', 'vendor_styles' );
-add_action( 'wp_enqueue_scripts', 'app_styles' );
-add_action( 'wp_enqueue_scripts', 'vendor_scripts' );
-add_action( 'wp_enqueue_scripts', 'app_scripts' );
+function vendor_style_minify() {
+	wp_enqueue_style('vendor.css',get_stylesheet_directory_uri() . '/dist/css/vendor.css');
+}
+
+function vendor_script_minify() {
+	wp_enqueue_script('vendor.js',get_stylesheet_directory_uri() . '/dist/vendor.js');
+}
+
+function app_style_minify() {
+	wp_enqueue_style('app.css',get_stylesheet_directory_uri() . '/dist/css/app.css');
+}
+
+function app_script_minify() {
+	wp_enqueue_script('app.js',get_stylesheet_directory_uri() . '/dist/app.js');
+	wp_localize_script( 'app.js', 'WPAPI', array('api_url' => esc_url_raw(get_json_url()), 'api_nonce' => wp_create_nonce('wp_json'), 'template_url' => get_bloginfo('template_directory')) );
+}
+
+// Development mode
+function run_dev() {
+	add_action( 'wp_enqueue_scripts', 'vendor_styles' );
+	add_action( 'wp_enqueue_scripts', 'app_styles' );
+	add_action( 'wp_enqueue_scripts', 'vendor_scripts' );
+	add_action( 'wp_enqueue_scripts', 'app_scripts' );
+}
+
+function run_production() {
+	add_action( 'wp_enqueue_scripts', 'vendor_style_minify' );
+	add_action( 'wp_enqueue_scripts', 'app_style_minify' );
+	add_action( 'wp_enqueue_scripts', 'vendor_script_minify' );
+	add_action( 'wp_enqueue_scripts', 'app_script_minify' );
+}
+
+// run_dev();
+run_production();
 
 // config
 add_theme_support( 'post-thumbnails' );

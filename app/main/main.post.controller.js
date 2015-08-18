@@ -23,7 +23,7 @@ angular.module("app").controller("MainPostController", ["Post", "Category", "$st
     });
   };
   vm.loadingData = function(data) {
-    var params;
+    var delay, params;
     if (data.length === 0) {
       vm.paging.loaded = true;
       vm.paging.page--;
@@ -38,8 +38,11 @@ angular.module("app").controller("MainPostController", ["Post", "Category", "$st
     $state.go($state.current, params, {
       notify: false
     });
+    delay = 0;
     return angular.forEach(data, function(val) {
-      return vm.posts.push(val);
+      val.delay = delay;
+      vm.posts.push(val);
+      return delay += 0.1;
     });
   };
   vm.loadData = function() {

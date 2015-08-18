@@ -2,7 +2,6 @@ angular.module("app").directive('loadingBar', ["$http", function($http) {
   return {
     restrict: 'A',
     link: function(scope, elm, attrs) {
-      console.log(3);
       scope.isLoading = function() {
         return $http.pendingRequests.length > 0;
       };
