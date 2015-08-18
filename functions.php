@@ -63,6 +63,7 @@ function app_style_minify() {
 function app_script_minify() {
 	wp_enqueue_script('app.js',get_stylesheet_directory_uri() . '/dist/app.js');
 	wp_localize_script( 'app.js', 'WPAPI', array('site' => esc_url_raw(get_json_url()), 'api_nonce' => wp_create_nonce('wp_json'), 'template_url' => get_bloginfo('template_directory')) );
+	wp_localize_script('app.js', 'WP_SETTING', array('TITLE' => get_bloginfo('name'), 'DESCRIPTION' => get_bloginfo('description')));
 }
 
 // Development mode
