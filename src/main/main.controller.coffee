@@ -1,5 +1,10 @@
 angular.module "app"
-  .controller "MainController", (Post,Category)->
+  .controller "MainController", (Post,Category,$rootScope)->
+    # Web Title
+    $rootScope.WP_SETTING.SITE_TITLE = $rootScope.WP_SETTING.TITLE + " : " + $rootScope.WP_SETTING.DESCRIPTION
+    $rootScope.WP_SETTING.SITE_THUMBNAIL = ""
+
+    # Main Module
     vm = this
 
     # Variable
