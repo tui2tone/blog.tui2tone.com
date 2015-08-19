@@ -5,6 +5,7 @@
 	<meta name="description" content="{{WP_SETTING.SITE_TITLE}} {{WP_SETTING.DESCRIPTION}}">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+	<meta name="google-site-verification" content="QuDQ6XJTf1u2KQri8ZkVvvbDEpQZqdbl_F3KtkJKUPc" />
 
 	<!-- Facebook Meta -->
   <meta property="og:title" content="{{WP_SETTING.SITE_TITLE}}">
