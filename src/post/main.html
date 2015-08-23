@@ -1,4 +1,4 @@
-<div class="jumbotro post-header" data-stellar-background-ratio="0.5" style="background-image: url({{post.data.featured_image.source}})">
+<div class="jumbotro post-header" ng-style="{'background-image': 'url(' + post.data.featured_image.source + ')'}">
 </div>
 <div class="container">
   <div class="post-container">
@@ -7,7 +7,7 @@
       <h4>{{post.data.excerpt}}</h4>
       <p class="post-date">{{post.data.date | date: "dd MMM yyyy HH:mm"}}</p>
     </div>
-    <div class="post-content animated fadeInUp" ng-bind-html="post.data.content">
+    <div class="post-content animated fadeInUp" compile="post.data.content">
 
     </div>
   </div>

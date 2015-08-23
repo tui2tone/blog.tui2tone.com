@@ -1,7 +1,8 @@
 {
   "name": "ng-boilerplate",
   "version": "0.0.1",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "gulp": "*",
     "gulp-file": "*",
     "gulp-sass": "*",

@@ -20,7 +20,9 @@
     "ngInfiniteScroll": "latest",
     "ionicons": "latest",
     "angular-scroll": "latest",
-    "angular-material": "latest"
+    "angular-material": "latest",
+    "codemirror": "latest",
+    "angular-ui-codemirror": "latest"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"
