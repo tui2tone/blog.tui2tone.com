@@ -358,13 +358,15 @@ footer.footer {
   padding-bottom: 150px;
   max-width: 700px;
   margin: 0 auto; }
-  .post-container .post-title h3 {
-    font-size: 2.5em;
-    color: #48AD01; }
-  .post-container .post-title h4 {
-    font-size: 1.2em; }
-  .post-container .post-title .post-date {
-    font-size: 0.9em; }
+  .post-container .post-title {
+    text-align: center; }
+    .post-container .post-title h3 {
+      font-size: 2.5em;
+      color: #48AD01; }
+    .post-container .post-title h4 {
+      font-size: 1.2em; }
+    .post-container .post-title .post-date {
+      font-size: 0.9em; }
   .post-container .post-content {
     font-size: 1.15em;
     margin-top: 25px; }
@@ -374,8 +376,10 @@ footer.footer {
       border-radius: 0;
       padding: 0; }
     .post-container .post-content code:not(.ng-high-light) {
-      background-color: #E4F1FE;
-      color: #22313F; }
+      background-color: #FFF;
+      color: #f9690e;
+      font-size: 0.8em;
+      padding: 2px 5px; }
     .post-container .post-content .hljs {
       padding: 15px; }
     .post-container .post-content .aligncenter {

@@ -64,7 +64,9 @@ gulp.task("build",function() {
     './bower_components/bootstrap/dist/css/bootstrap.min.css',
     './bower_components/animate.css/animate.css',
     './bower_components/ionicons/css/ionicons.min.css',
-    './bower_components/angular-material/angular-material.css'
+    './bower_components/angular-material/angular-material.css',
+    './bower_components/highlightjs/styles/default.css',
+    './bower_components/highlightjs/styles/tomorrow.css'
   ]).pipe(minifyCss({compatibility: 'ie8'})).pipe(concat('vendor.css')).pipe(gulp.dest('dist/css'));
 
   // app.css
@@ -76,6 +78,7 @@ gulp.task("build",function() {
   gulp.src([
     './bower_components/jquery/dist/jquery.min.js',
     './bower_components/moment/moment.js',
+    './bower_components/highlightjs/highlight.pack.js',
     './bower_components/bootstrap/dist/js/bootstrap.min.js',
     './bower_components/angular/angular.min.js',
     './bower_components/angular-ui-router/release/angular-ui-router.min.js',

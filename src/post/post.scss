@@ -20,6 +20,8 @@
   margin: 0 auto;
   .post-title {
 
+    text-align: center;
+
     h3 {
         font-size: 2.5em;
         color: #48AD01;
@@ -48,8 +50,10 @@
     }
 
     code:not(.ng-high-light) {
-      background-color: #E4F1FE;
-      color: #22313F;
+      background-color: #FFF;
+      color: rgba(249, 105, 14,1);
+      font-size: 0.8em;
+      padding: 2px 5px;
     }
 
 
