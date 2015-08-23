@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js" ng-app="app">
 <head>
-	<title>{{WP_SETTING.SITE_TITLE}}</title>
+	<title title-tag>BLOG.TUI2TONE.COM</title>
 	<meta name="description" content="{{WP_SETTING.SITE_TITLE}} {{WP_SETTING.DESCRIPTION}}">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">

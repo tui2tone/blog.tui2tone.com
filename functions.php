@@ -2,7 +2,7 @@
 function vendor_scripts() {
 	wp_enqueue_script('jquery',get_stylesheet_directory_uri() . '/bower_components/jquery/dist/jquery.min.js');
 	wp_enqueue_script('moment',get_stylesheet_directory_uri() . '/bower_components/moment/moment.js');
-	wp_enqueue_script('codemirror',get_stylesheet_directory_uri() . '/bower_components/codemirror/lib/codemirror.js');
+	wp_enqueue_script('highlightjs',get_stylesheet_directory_uri() . '/bower_components/highlightjs/highlight.pack.js');
 	wp_enqueue_script('bootstrap',get_stylesheet_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js');
 	wp_enqueue_script('angularjs',get_stylesheet_directory_uri() . '/bower_components/angular/angular.min.js');
 	wp_enqueue_script('ui-router',get_stylesheet_directory_uri() . '/bower_components/angular-ui-router/release/angular-ui-router.min.js');
@@ -14,7 +14,6 @@ function vendor_scripts() {
 	wp_enqueue_script('ng-infinite-scroll',get_stylesheet_directory_uri() . '/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js');
 	wp_enqueue_script('angular-scroll',get_stylesheet_directory_uri() . '/bower_components/angular-scroll/angular-scroll.min.js');
 	wp_enqueue_script('angular-material',get_stylesheet_directory_uri() . '/bower_components/angular-material/angular-material.min.js');
-	wp_enqueue_script('ui-codemirror',get_stylesheet_directory_uri() . '/bower_components/angular-ui-codemirror/ui-codemirror.min.js');
 }
 
 function vendor_styles() {
@@ -22,7 +21,8 @@ function vendor_styles() {
 	wp_enqueue_style('animate.css',get_stylesheet_directory_uri() . '/bower_components/animate.css/animate.css');
 	wp_enqueue_style('ionicons',get_stylesheet_directory_uri() . '/bower_components/ionicons/css/ionicons.min.css');
 	wp_enqueue_style('angular-material',get_stylesheet_directory_uri() . '/bower_components/angular-material/angular-material.css');
-	wp_enqueue_style('codemirror',get_stylesheet_directory_uri() . '/bower_components/codemirror/lib/codemirror.css');
+	wp_enqueue_style('highlightjs',get_stylesheet_directory_uri() . '/bower_components/highlightjs/styles/default.css');
+	wp_enqueue_style('highlightjs-style',get_stylesheet_directory_uri() . '/bower_components/highlightjs/styles/tomorrow.css');
 }
 
 function app_styles() {

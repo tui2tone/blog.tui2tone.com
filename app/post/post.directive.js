@@ -1,7 +1,9 @@
-angular.module("app").directive('ngCodemirror', function() {
+angular.module("app").directive('ngHighLight', function() {
   return {
     restrict: 'C',
-    link: function(scope, elm, attrs) {}
+    link: function(scope, elm, attrs) {
+      return hljs.highlightBlock(elm);
+    }
   };
 });
 

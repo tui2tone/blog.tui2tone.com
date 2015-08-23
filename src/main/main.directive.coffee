@@ -12,3 +12,11 @@ angular.module "app"
           elm.hide()
         return
       return
+  .directive 'titleTag', ($rootScope) ->
+    restrict: 'A'
+    link: (scope, elm, attrs) ->
+      scope.$watch ->
+        $rootScope.WP_SETTING.SITE_TITLE
+      , (val) ->
+        if !angular.isUndefined(val)
+          elm.html(val)

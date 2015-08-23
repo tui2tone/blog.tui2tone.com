@@ -44,6 +44,17 @@
 
     pre {
       border-radius: 0;
+      padding: 0;
+    }
+
+    code:not(.ng-high-light) {
+      background-color: #E4F1FE;
+      color: #22313F;
+    }
+
+
+    .hljs {
+      padding: 15px;
     }
 
     .aligncenter	{ display: block; margin: 0 auto; }

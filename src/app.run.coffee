@@ -4,7 +4,7 @@ angular.module "app"
     $rootScope.$stateParams = $stateParams
     $rootScope.config = angular.copy($config)
     $rootScope.api_nonce = WPAPI.api_nonce
-    $rootScope.WP_SETTING = WP_SETTING
+    $rootScope.WP_SETTING = WP_SETTING || {}
 
     $rootScope.codeMirror = {
       minOptions: {

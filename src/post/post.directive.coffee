@@ -1,7 +1,8 @@
 angular.module "app"
-  .directive 'ngCodemirror', ->
+  .directive 'ngHighLight', ->
       restrict: 'C'
       link: (scope, elm, attrs) ->
+        hljs.highlightBlock(elm);
 
 angular.module "app"
   .directive 'compile', [
