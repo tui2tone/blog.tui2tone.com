@@ -2,7 +2,10 @@ angular.module "app"
   .directive 'ngHighLight', ->
       restrict: 'C'
       link: (scope, elm, attrs) ->
-        hljs.highlightBlock(elm);
+        if elm[0].textContent.trim() == ""
+          elm.remove()
+        else
+          hljs.highlightBlock(elm);
 
 angular.module "app"
   .directive 'compile', [

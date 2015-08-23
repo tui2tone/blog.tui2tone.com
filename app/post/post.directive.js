@@ -2,7 +2,11 @@ angular.module("app").directive('ngHighLight', function() {
   return {
     restrict: 'C',
     link: function(scope, elm, attrs) {
-      return hljs.highlightBlock(elm);
+      if (elm[0].textContent.trim() === "") {
+        return elm.remove();
+      } else {
+        return hljs.highlightBlock(elm);
+      }
     }
   };
 });
