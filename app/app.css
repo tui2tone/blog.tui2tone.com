@@ -154,7 +154,8 @@ footer.footer {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); }
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%); }
             .blog-list-container .blog-list a.blog > div .title > div h4 {
               color: #fff;
               text-decoration: none;
