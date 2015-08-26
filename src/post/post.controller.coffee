@@ -4,7 +4,6 @@ angular.module "app"
     # Web Title
     $rootScope.WP_SETTING.SITE_TITLE = post.title + " " + post.excerpt +  " : " +  $rootScope.WP_SETTING.TITLE
     $rootScope.WP_SETTING.SITE_THUMBNAIL = post.featured_image.source
-    post.content = post.content.replace(/class="ng-codemirror"/g, 'ui-codemirror="codeMirror.minOptions"');
 
     # Main Module
     vm = this

@@ -352,21 +352,21 @@ footer.footer {
   margin-bottom: 0;
   box-shadow: 0 1px -2px #333;
   text-align: center; }
+  .post-header .post-title {
+    text-align: center; }
+    .post-header .post-title h3 {
+      font-size: 2.5em;
+      color: #48AD01; }
+    .post-header .post-title h4 {
+      font-size: 1.2em; }
+    .post-header .post-title .post-date {
+      font-size: 0.9em; }
 
 .post-container {
   padding: 25px 10px;
   padding-bottom: 150px;
   max-width: 700px;
   margin: 0 auto; }
-  .post-container .post-title {
-    text-align: center; }
-    .post-container .post-title h3 {
-      font-size: 2.5em;
-      color: #48AD01; }
-    .post-container .post-title h4 {
-      font-size: 1.2em; }
-    .post-container .post-title .post-date {
-      font-size: 0.9em; }
   .post-container .post-content {
     font-size: 1.15em;
     margin-top: 25px; }
