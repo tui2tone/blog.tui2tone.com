@@ -22,7 +22,9 @@
     "angular-scroll": "latest",
     "angular-material": "latest",
     "highlightjs": "latest",
-    "angularjs-socialshare": "latest"
+    "angularjs-socialshare": "latest",
+    "angulartics": "latest",
+    "angulartics-google-analytics": "latest"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

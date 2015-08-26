@@ -1,4 +1,4 @@
-angular.module("app").run(["$rootScope", "$state", "$stateParams", function($rootScope, $state, $stateParams) {
+angular.module("app").run(["$rootScope", "$state", "$stateParams", "$location", "$window", function($rootScope, $state, $stateParams, $location, $window) {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
   $rootScope.config = angular.copy($config);
@@ -12,4 +12,12 @@ angular.module("app").run(["$rootScope", "$state", "$stateParams", function($roo
       mode: 'javascript'
     }
   };
+  $rootScope.$on('$stateChangeSuccess', function(event) {
+    if (!$window.ga) {
+      return;
+    }
+    $window.ga('send', 'pageview', {
+      page: $location.path()
+    });
+  });
 }]);
