@@ -12,11 +12,12 @@ angular.module("app").controller("MainPostController", ["Post", "Category", "$st
     var params;
     vm.loading = true;
     params = {};
+    params.order = "DESC";
+    params.orderby = "ID";
+    params.posts_per_page = 10;
     if (vm.selected_category !== "All") {
       params.category_name = vm.selected_category;
     }
-    params.order = "DESC";
-    params.posts_per_page = 10;
     params.page = vm.paging.page;
     return Post.getPosts(params).then(function(data) {
       vm.loadingData(data);

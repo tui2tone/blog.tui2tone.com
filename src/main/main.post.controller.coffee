@@ -14,10 +14,11 @@ angular.module "app"
     vm.getPosts = ->
       vm.loading = true
       params = {}
+      params.order = "DESC"
+      params.orderby = "ID"
+      params.posts_per_page = 10
       if vm.selected_category != "All"
         params.category_name = vm.selected_category
-      params.order = "DESC"
-      params.posts_per_page = 10
       params.page = vm.paging.page
       Post.getPosts(params).then (data) ->
         vm.loadingData(data)
