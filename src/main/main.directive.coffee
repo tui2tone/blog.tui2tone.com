@@ -20,3 +20,11 @@ angular.module "app"
       , (val) ->
         if !angular.isUndefined(val)
           elm.html(val)
+  .directive 'metaDescription', ($rootScope) ->
+    restrict: 'A'
+    link: (scope, elm, attrs) ->
+      scope.$watch ->
+        $rootScope.WP_SETTING.SITE_DESCRIPTION
+      , (val) ->
+        if !angular.isUndefined(val)
+          elm.html(val)

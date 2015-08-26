@@ -16,9 +16,7 @@ gulp.task("watch", function() {
   gulp.watch('./src/**/*.html',['templates']);
 });
 
-gulp.task('compile', function() {
-  return runSequence('scss','coffee','templates');
-});
+gulp.task('compile',['scss','coffee','templates']);
 
 gulp.task("scss", function() {
   return gulp.src(['./src/**/*.scss'])
@@ -89,7 +87,8 @@ gulp.task("build",function() {
     './bower_components/angular-bootstrap/ui-bootstrap.min.js',
     './bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js',
     './bower_components/angular-scroll/angular-scroll.min.js',
-    './bower_components/angular-material/angular-material.min.js'
+    './bower_components/angular-material/angular-material.min.js',
+    './bower_components/angularjs-socialshare/dist/angular-socialshare.min.js'
   ]).pipe(uglify()).pipe(concat('vendor.js')).pipe(gulp.dest('dist'));
 
   // app.js

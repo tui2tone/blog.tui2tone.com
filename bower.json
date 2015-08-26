@@ -21,7 +21,8 @@
     "ionicons": "latest",
     "angular-scroll": "latest",
     "angular-material": "latest",
-    "highlightjs": "latest"
+    "highlightjs": "latest",
+    "angularjs-socialshare": "latest"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

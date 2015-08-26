@@ -12,5 +12,29 @@
     <div class="post-content animated fadeInUp" compile="post.data.content">
 
     </div>
+    <div class="post-share-container">
+      <h4>Social Share</h4>
+      <div class="post-share"><a href="#"
+        class="facebook"
+        socialshare
+        socialshare-provider="facebook"
+        socialshare-text="{{post.data.title}}"
+        socialshare-url="{{post.current_url}}"
+        >
+          <i class="icon ion-social-facebook"></i>
+          <div>Share</div>
+        </a>
+        <a href="#"
+          class="twitter"
+          socialshare
+          socialshare-provider="twitter"
+          socialshare-text="{{post.data.title}}"
+          socialshare-url="{{post.current_url}}"
+          >
+            <i class="icon ion-social-twitter"></i>
+            <div>Share</div>
+          </a>
+      </div>
+    </div>
   </div>
 </div>

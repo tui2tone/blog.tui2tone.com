@@ -27,4 +27,17 @@ angular.module("app").directive('loadingBar', ["$http", function($http) {
       });
     }
   };
+}]).directive('metaDescription', ["$rootScope", function($rootScope) {
+  return {
+    restrict: 'A',
+    link: function(scope, elm, attrs) {
+      return scope.$watch(function() {
+        return $rootScope.WP_SETTING.SITE_DESCRIPTION;
+      }, function(val) {
+        if (!angular.isUndefined(val)) {
+          return elm.html(val);
+        }
+      });
+    }
+  };
 }]);

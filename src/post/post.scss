@@ -1,7 +1,6 @@
 .post-header {
-  padding: 35px;
-  padding-top: 100px;
-  min-height: 350px;
+  padding: 100px 35px 35px;
+  min-height: 300px;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,66 +10,119 @@
   margin-bottom: 0;
   box-shadow: 0 1px -2px #333;
   text-align: center;
-
   .post-title {
-
     text-align: center;
-
     h3 {
-        font-size: 2.5em;
-        color: #48AD01;
+      font-size: 2.5em;
+      color: #48ad01;
     }
-
     h4 {
       font-size: 1.2em;
     }
-
     .post-date {
       font-size: 0.9em;
     }
   }
-
 }
-
 .post-container {
-  padding: 25px 10px;
-  padding-bottom: 150px;
+  padding: 25px 10px 150px;
   max-width: 700px;
   margin: 0 auto;
-
   .post-content {
     font-size: 1.15em;
     margin-top: 25px;
-
     p.indent {
       text-indent: 40px;
     }
-
     pre {
       border-radius: 0;
       padding: 0;
     }
-
     code:not(.ng-high-light) {
-      background-color: #FFF;
+      background-color: #fff;
       color: rgba(249, 105, 14,1);
       font-size: 0.8em;
       padding: 2px 5px;
     }
-
-
     .hljs {
       padding: 15px;
     }
+    .aligncenter {
+      display: block;
+      margin: 0 auto;
+    }
+    .alignright {
+      float: right;
+      margin: 0 0 1em 1em;
+    }
+    .alignleft {
+      float: left;
+      margin: 0 1em 1em 0;
+    }
+    .floatleft {
+      float: left;
+    }
+    .floatright {
+      float: right;
+    }
+  }
+  .post-share-container {
+    margin-top: 50px;
+    text-align: center;
 
-    .aligncenter	{ display: block; margin: 0 auto; }
-    .alignright	{ float: right; margin: 0 0 1em 1em; }
-    .alignleft	{ float: left; margin: 0 1em 1em 0; }
-    .floatleft	{ float: left; }
-    .floatright	{ float: right; }
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8em;
+    }
+    .post-share {
+      text-align: center;
+      a {
+        position: relative;
+        display: inline-block;
+        font-size: 11px;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        line-height: 15px;
+        vertical-align: middle;
+        text-decoration: none;
+        i {
+          position: relative;
+          display: block;
+          padding: 10px;
+          padding-bottom: 0px;
+          font-size: 20px;
+        }
+        div {
+          position: relative;
+          display: block;
+          padding: 5px 10px;
+          margin-bottom: 0;
+        }
+        div.counter {
+          display: inline-block;
+          margin-left: 5px;
+          padding: 2px 5px;
+          background-color: rgba(255,255,255,0.1);
+        }
+      }
+      a.facebook {
+        background-color: #3b5998;
+        color: #fff;
+        i {
+          border-bottom: 0px solid #EEE;
+        }
+      }
+      a.twitter {
+        background-color: #55acee;
+        color: #fff;
+        i {
+          border-bottom: 0px solid #EEE;
+        }
+      }
+    }
   }
 }
-
 @media (max-width: 768px) {
   .post-container {
     padding-bottom: 210px;
