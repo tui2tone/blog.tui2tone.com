@@ -6,13 +6,6 @@ angular.module "app"
     $rootScope.api_nonce = WPAPI.api_nonce
     $rootScope.WP_SETTING = WP_SETTING || {}
 
-    $rootScope.codeMirror =
-      minOptions:
-        lineWrapping : true
-        lineNumbers: true
-        readOnly: 'nocursor'
-        mode: 'javascript'
-
     $rootScope.$on '$stateChangeSuccess', (event) ->
       if !$window.ga
         return

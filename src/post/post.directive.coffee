@@ -20,3 +20,9 @@ angular.module "app"
           return
         return
   ]
+
+
+angular.module "app"
+  .filter 'capitalize' , ->
+    return (input) ->
+      return input

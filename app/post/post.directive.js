@@ -23,3 +23,9 @@ angular.module("app").directive('compile', [
     };
   }
 ]);
+
+angular.module("app").filter('capitalize', function() {
+  return function(input) {
+    return input;
+  };
+});
