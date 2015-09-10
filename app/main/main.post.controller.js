@@ -13,7 +13,7 @@ angular.module("app").controller("MainPostController", ["Post", "Category", "$st
     vm.loading = true;
     params = {};
     params.order = "DESC";
-    params.orderby = "ID";
+    params.orderby = "date";
     params.posts_per_page = 10;
     if (vm.selected_category !== "All") {
       params.category_name = vm.selected_category;
