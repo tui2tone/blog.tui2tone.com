@@ -143,7 +143,7 @@ footer.footer {
           position: absolute;
           bottom: 0;
           padding: 8px 15px;
-          background-color: rgba(0, 0, 0, 0.4);
+          background-color: rgba(0, 0, 0, 0.5);
           width: 100%;
           text-align: center;
           height: 80px;
@@ -174,7 +174,7 @@ footer.footer {
       background-color: #f9f9f9; }
       .blog-list-container .blog-list a.blog:hover > div .title {
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); }
+        background-color: rgba(0, 0, 0, 0.75); }
 
 @media (max-width: 768px) {
   .blog-list-container {
