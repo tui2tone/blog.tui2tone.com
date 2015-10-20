@@ -1,22 +1,36 @@
-<ul class="blog-categories" ng-init="main.selected_category = mp.selected_category">
-  <li ng-class="{active: main.selected_category == 'All'}"><a href="/">All</a></li>
-  <li ng-repeat="category in main.categories" ng-class="{active: main.selected_category == category.slug}"><a href="/tag/{{category.slug}}">{{category.name}}</a></li>
-</ul>
-<div class="blog-list" infinite-scroll="mp.loadData()">
+<div infinite-scroll="mp.loadData()">
   <div class="row">
-    <div class="col-lg-6 col-md-6" ng-repeat="post in mp.posts ">
-      <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" class="blog animated fadeInUp" style="animation-delay: {{post.delay}}s">
-        <div>
-          <img class="img-responsive" ng-src="{{post.featured_image.source}}" />
-          <div class="title" ng-style="{'background-color': post.meta.post_color}">
-            <div>
-              <h4>{{post.title}}</h4>
-              <p>{{post.excerpt}}</p>
-            </div>
+    <div class="col-xs-9">
+      <div class="blog-list">
+        <div class="blog animated fadeInUp" ng-repeat="post in mp.posts">
+          <div class="thumbnail-min">
+            <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" style="animation-delay: {{post.delay}}s">
+              <div class="thumbnail"><img ng-src="{{post.featured_image.source || 'http://blog.tui2tone.com/wp-content/uploads/2015/08/gulp-2x-1.png'}}"/></div>
+              <div class="title">
+                <h4>{{post.title}}</h4>
+                <p>{{post.excerpt}}</p>
+              </div>
+            </a>
           </div>
         </div>
-      </a>
+      </div>
     </div>
+    <div class="col-xs-3">
+      <div class="sidebar">
+        <div class="sizebar-block">
+          <ul class="blog-categories" ng-init="main.selected_category = mp.selected_category">
+            <li ng-class="{active: main.selected_category == 'All'}">
+              <a href="/">All</a>
+            </li>
+            <li ng-class="{active: main.selected_category == category.slug}" ng-repeat="category in main.categories">
+              <a href="/tag/{{category.slug}}">{{category.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-xs-12">
       <div class="post-loading animated fadeInDown" ng-show="mp.loading">
         <i class="icon ion-load-c spin"></i>

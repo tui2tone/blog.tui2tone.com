@@ -4,7 +4,7 @@ function vendor_scripts() {
 	wp_enqueue_script('moment',get_stylesheet_directory_uri() . '/bower_components/moment/moment.js');
 	wp_enqueue_script('highlightjs',get_stylesheet_directory_uri() . '/bower_components/highlightjs/highlight.pack.js');
 	wp_enqueue_script('bootstrap',get_stylesheet_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js');
-	wp_enqueue_script('angularjs',get_stylesheet_directory_uri() . '/bower_components/angular/angular.min.js');
+	wp_enqueue_script('angularjs',get_stylesheet_directory_uri() . '/bower_components/angular/angular.js');
 	wp_enqueue_script('ui-router',get_stylesheet_directory_uri() . '/bower_components/angular-ui-router/release/angular-ui-router.min.js');
 	wp_enqueue_script('ng-animate',get_stylesheet_directory_uri() . '/bower_components/angular-animate/angular-animate.min.js');
 	wp_enqueue_script('ng-sanitize',get_stylesheet_directory_uri() . '/bower_components/angular-sanitize/angular-sanitize.min.js');
@@ -86,8 +86,8 @@ function run_production() {
 	add_action( 'wp_enqueue_scripts', 'app_script_minify' );
 }
 
-// run_dev();
-run_production();
+run_dev();
+// run_production();
 
 // Prerender Meta Tag
 // Get ID'

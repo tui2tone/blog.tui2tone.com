@@ -3,7 +3,7 @@ angular.module "app"
 
     # Web Title
     $rootScope.WP_SETTING.SITE_TITLE = post.title + " " + post.excerpt +  " : " +  $rootScope.WP_SETTING.TITLE
-    $rootScope.WP_SETTING.SITE_THUMBNAIL = post.featured_image.source
+    $rootScope.WP_SETTING.SITE_THUMBNAIL = post.featured_image
 
     # Main Module
     vm = this

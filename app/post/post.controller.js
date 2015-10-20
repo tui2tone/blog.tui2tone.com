@@ -1,7 +1,7 @@
 angular.module("app").controller("PostController", ["post", "$document", "$rootScope", "$window", "$http", function(post, $document, $rootScope, $window, $http) {
   var vm;
   $rootScope.WP_SETTING.SITE_TITLE = post.title + " " + post.excerpt + " : " + $rootScope.WP_SETTING.TITLE;
-  $rootScope.WP_SETTING.SITE_THUMBNAIL = post.featured_image.source;
+  $rootScope.WP_SETTING.SITE_THUMBNAIL = post.featured_image;
   vm = this;
   vm.data = post;
   vm.current_url = $window.location.href;
