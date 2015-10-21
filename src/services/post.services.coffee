@@ -9,7 +9,6 @@ angular.module "app"
         else
           get_param_s.push("filter[" + key + "]=" + val)
 
-      console.log $rootScope.WPAPI.api_url
       $http.get($rootScope.WPAPI.api_url + '/posts?' + get_param_s.join("&"))
         .success (data) ->
           delay.resolve(data)

@@ -16,7 +16,8 @@
 
 	<script type="text/javascript">
 		var $config = {
-			image_url: "<?php bloginfo('template_url'); ?>/images/"
+			image_url: "<?php bloginfo('template_url'); ?>/images/",
+			base_url: "<?php get_site_url(); ?>"
 		}
 	</script>
 	<?php wp_head(); ?>

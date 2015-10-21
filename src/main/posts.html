@@ -2,11 +2,14 @@
   <div class="row">
     <div class="col-sm-12 col-md-9">
       <div class="blog-list">
+        <h3 class="title" ng-show="main.selected_category != 'All'">
+          <span ng-repeat="category in main.categories" ng-if="main.selected_category == category.slug">{{category.name}}<span>
+        </h3>
         <div class="blog animated fadeInUp" ng-repeat="post in mp.posts">
           <div class="thumbnail-min">
             <div class="thumbnail" ng-style="{'background-color': post.meta.post_bg_color || '#CCC' }"><img ng-src="{{post.meta.post_thumbnail}}"/></div>
             <div class="title">
-              <a href="{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}/" style="animation-delay: {{post.delay}}s">
+              <a href="{{config.base_url}}{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}/" style="animation-delay: {{post.delay}}s">
                 <h4 ng-style="{'color': post.meta.post_title_color || '#CCC' }">{{post.title}}</h4>
                 <p>{{post.excerpt}}</p>
                 <p class="text-right readmore">Read More..</p>
@@ -21,10 +24,10 @@
         <div class="sizebar-block">
           <ul class="blog-categories" ng-init="main.selected_category = mp.selected_category">
             <li ng-class="{active: main.selected_category == 'All'}">
-              <a href="/">All</a>
+              <a href="{{config.base_url}}">All</a>
             </li>
             <li ng-class="{active: main.selected_category == category.slug}" ng-repeat="category in main.categories">
-              <a href="/tag/{{category.slug}}">{{category.name}}</a>
+              <a href="{{config.base_url}}tag/{{category.slug}}">{{category.name}}</a>
             </li>
           </ul>
         </div>

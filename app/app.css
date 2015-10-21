@@ -110,30 +110,36 @@ footer.footer {
       text-align: left;
       list-style: none;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      border-radius: 2px;
+      box-shadow: 0 1px 1px #CCC; }
       .blog-list-container .sidebar ul.blog-categories > li {
-        display: block; }
+        display: block;
+        background-color: #FFF;
+        border-bottom: 1px solid #EEE;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
         .blog-list-container .sidebar ul.blog-categories > li a {
           display: block;
-          padding: 8px 15px;
+          padding: 12px 15px;
           color: #212121;
           font-family: 'Lato', sans-serif;
           font-size: 13px;
           text-decoration: none; }
-      .blog-list-container .sidebar ul.blog-categories > li.active {
-        background-color: #55c34d; }
-        .blog-list-container .sidebar ul.blog-categories > li.active a {
-          color: #fff; }
+      .blog-list-container .sidebar ul.blog-categories > li:last-child {
+        border-bottom: 0px solid #EEE; }
       .blog-list-container .sidebar ul.blog-categories > li:hover {
         cursor: pointer;
-        background-color: #FFF; }
-      .blog-list-container .sidebar ul.blog-categories > li.active:hover {
-        cursor: pointer;
-        background-color: #55c34d; }
+        background-color: #FFF;
+        border-left: 8px solid #55c34d; }
   .blog-list-container .blog-list {
     display: block;
     position: relative;
     padding: 45px 15px; }
+    .blog-list-container .blog-list > .title {
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #555; }
     .blog-list-container .blog-list .blog {
       text-decoration: none;
       display: block;
@@ -182,9 +188,7 @@ footer.footer {
           background-color: #EB4A4B; }
           .blog-list-container .blog-list .blog > div.thumbnail-min .thumbnail img {
             height: auto;
-            width: 50px;
-            filter: brightness(5);
-            -webkit-filter: brightness(5); }
+            width: 50px; }
       .blog-list-container .blog-list .blog > div:after {
         position: relative;
         display: block;
@@ -249,7 +253,7 @@ footer.footer {
     font-size: 1.2em; }
   .navbar .navbar-nav > li > a {
     background-color: transparent;
-    color: #0B8389;
+    color: #555;
     line-height: 100px;
     vertical-align: middle;
     font-size: 12px;
@@ -266,7 +270,7 @@ footer.footer {
     padding-right: 0; }
   .navbar .navbar-nav > li.active > a {
     background-color: transparent;
-    color: #0B8389; }
+    color: #555; }
   .navbar .navbar-nav > li.active > a:hover {
     background-color: transparent; }
 

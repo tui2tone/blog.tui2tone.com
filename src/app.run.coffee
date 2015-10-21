@@ -6,7 +6,6 @@ angular.module "app"
     $rootScope.WPAPI = WPAPI
     $rootScope.api_nonce = WPAPI.api_nonce
     $rootScope.WP_SETTING = WP_SETTING || {}
-    console.log WPAPI
 
     $rootScope.$on '$stateChangeSuccess', (event) ->
       if !$window.ga

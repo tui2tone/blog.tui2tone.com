@@ -20,7 +20,6 @@ angular.module("app").controller("MainPostController", ["Post", "Category", "$st
     }
     params.page = vm.paging.page;
     return Post.getPosts(params).then(function(data) {
-      console.log(data);
       vm.loadingData(data);
       return vm.loading = false;
     });

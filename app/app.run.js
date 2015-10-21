@@ -5,7 +5,6 @@ angular.module("app").run(["$rootScope", "$state", "$stateParams", "$location", 
   $rootScope.WPAPI = WPAPI;
   $rootScope.api_nonce = WPAPI.api_nonce;
   $rootScope.WP_SETTING = WP_SETTING || {};
-  console.log(WPAPI);
   $rootScope.$on('$stateChangeSuccess', function(event) {
     if (!$window.ga) {
       return;
