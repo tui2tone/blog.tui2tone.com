@@ -13,6 +13,8 @@ angular.module "app"
       facebook: 0,
       twitter: 0
 
+    console.log vm.data
+
     vm.scrollTop = ->
       $document.scrollTopAnimated(0,500)
 

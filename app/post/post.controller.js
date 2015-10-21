@@ -9,6 +9,7 @@ angular.module("app").controller("PostController", ["post", "$document", "$rootS
     facebook: 0,
     twitter: 0
   };
+  console.log(vm.data);
   vm.scrollTop = function() {
     return $document.scrollTopAnimated(0, 500);
   };

@@ -1,5 +1,5 @@
 .post-header {
-  padding: 150px 35px 35px;
+  padding: 180px 35px 35px;
   min-height: 400px;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -32,6 +32,7 @@
     font-size: 1.15em;
     margin-top: 25px;
     line-height: 1.65em;
+    font-family: 'Lato', sans-serif;
     p.indent {
       text-indent: 40px;
     }
@@ -88,6 +89,7 @@
         line-height: 15px;
         vertical-align: middle;
         text-decoration: none;
+        border-radius: 2px;
         i {
           position: relative;
           display: block;
@@ -103,7 +105,7 @@
         }
         div.counter {
           display: inline-block;
-          margin-left: 5px;
+          margin-left: 10px;
           padding: 2px 5px;
           background-color: rgba(255,255,255,0.1);
         }

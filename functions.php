@@ -152,9 +152,6 @@ function remove_admin_login_header() {
 // remove <p> from excerpt
 remove_filter('the_excerpt', 'wpautop');
 
-// Add Meta Fields to Posts and Pages
-add_filter( 'json_prepare_post', 'addACFmeta' );
-
 function addACFmeta( $_post ){
     $ACF = get_post_meta( $_post['ID']);
     foreach( $ACF as $key => &$custom_field ){
@@ -162,6 +159,9 @@ function addACFmeta( $_post ){
     }
     return $_post;
 }
+
+// Add Meta Fields to Posts and Pages
+add_filter( 'json_prepare_post', 'addACFmeta' );
 
 // Change Preview link
 function nixcraft_preview_link() {

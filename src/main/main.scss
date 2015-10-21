@@ -69,23 +69,32 @@
 
       & > div {
         background-color: #FFF;
-        padding: 30px;
+        padding: 0px;
         border-radius: 2px;
         box-shadow: 0 1px 1px #CCC;
 
         .title {
           color: #444;
           text-decoration: none;
+          padding: 30px;
+          flex-grow: 13;
+          flex-basis: 0;
 
           h4 {
-            color: #0B8389;
+            color: #EB4A4B;
             font-weight: 600;
             font-family: 'Lato', sans-serif;
           }
 
           p {
-
+            color: #444;
             font-family: 'Lato', sans-serif;
+          }
+
+          .readmore {
+            font-size: 11px;
+            margin-top: 15px;
+            margin-bottom: 0;
           }
         }
 
@@ -94,20 +103,28 @@
         }
       }
       & > div.thumbnail-min {
+        display: flex;
+        align-items: stretch;
         .thumbnail {
-          margin-right: 30px;
           margin-bottom: 0;
-          float: left;
           text-align: center;
-          width: 100px;
-          height: 100px;
+          flex-grow: 2;
+          flex-basis: 0;
           overflow: hidden;
-          border-radius: 2px;
+          border-radius: 0;
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
           border: 0;
+          position: relative;
+          display: block;
+          padding: 30px 15px;
+          background-color: #EB4A4B;
 
           img {
-            height: 100px;
-            width: auto;
+            height: auto;
+            width: 50px;
+            filter: brightness(5);
+            -webkit-filter: brightness(5);
           }
 
         }

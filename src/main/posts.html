@@ -1,21 +1,22 @@
 <div infinite-scroll="mp.loadData()">
   <div class="row">
-    <div class="col-xs-9">
+    <div class="col-sm-12 col-md-9">
       <div class="blog-list">
         <div class="blog animated fadeInUp" ng-repeat="post in mp.posts">
           <div class="thumbnail-min">
-            <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" style="animation-delay: {{post.delay}}s">
-              <div class="thumbnail"><img ng-src="{{post.featured_image.source || 'http://blog.tui2tone.com/wp-content/uploads/2015/08/gulp-2x-1.png'}}"/></div>
-              <div class="title">
-                <h4>{{post.title}}</h4>
+            <div class="thumbnail" ng-style="{'background-color': post.meta.post_bg_color || '#CCC' }"><img ng-src="{{post.meta.post_thumbnail}}"/></div>
+            <div class="title">
+              <a href="/{{post.date | date: 'yyyy'}}/{{post.date | date: 'MM'}}/{{post.slug}}/{{post.ID}}" style="animation-delay: {{post.delay}}s">
+                <h4 ng-style="{'color': post.meta.post_title_color || '#CCC' }">{{post.title}}</h4>
                 <p>{{post.excerpt}}</p>
-              </div>
-            </a>
+                <p class="text-right readmore">Read More..</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-xs-3">
+    <div class="col-xs-3 hidden-sm hidden-xs">
       <div class="sidebar">
         <div class="sizebar-block">
           <ul class="blog-categories" ng-init="main.selected_category = mp.selected_category">
@@ -31,7 +32,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-9">
       <div class="post-loading animated fadeInDown" ng-show="mp.loading">
         <i class="icon ion-load-c spin"></i>
         <br>

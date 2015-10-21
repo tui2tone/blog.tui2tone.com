@@ -5,7 +5,7 @@ angular.module("app").directive('ngHighLight', function() {
       if (elm[0].textContent.trim() === "") {
         return elm.remove();
       } else {
-        return hljs.highlightBlock(elm);
+        return hljs.highlightBlock(elm[0]);
       }
     }
   };

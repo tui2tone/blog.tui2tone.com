@@ -31,9 +31,12 @@ footer.footer {
 
     .title {
       padding-left: 10px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
 
       .subtitle {
         font-size: 11px;
+        font-family: 'Lato', sans-serif;
       }
 
       .social {
@@ -52,9 +55,10 @@ footer.footer {
         color: #333;
         margin: 10px;
         font-size: 11px;
-        font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         padding: 8px 15px;
+
+        font-family: 'Lato', sans-serif;
       }
       & > a:hover {
         background-color: rgba(255,255,255,0.6);

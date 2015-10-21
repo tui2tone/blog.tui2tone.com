@@ -40,9 +40,12 @@ footer.footer {
       border: 2px solid #DDD;
       margin-bottom: 0px; }
     footer.footer .author .title {
-      padding-left: 10px; }
+      padding-left: 10px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600; }
       footer.footer .author .title .subtitle {
-        font-size: 11px; }
+        font-size: 11px;
+        font-family: 'Lato', sans-serif; }
       footer.footer .author .title .social {
         margin-top: 4px; }
         footer.footer .author .title .social a {
@@ -53,9 +56,9 @@ footer.footer {
       color: #333;
       margin: 10px;
       font-size: 11px;
-      font-family: 'Montserrat', sans-serif;
       font-weight: 400;
-      padding: 8px 15px; }
+      padding: 8px 15px;
+      font-family: 'Lato', sans-serif; }
     footer.footer .navbar-nav > li > a:hover {
       background-color: rgba(255, 255, 255, 0.6);
       color: #333;
@@ -138,33 +141,50 @@ footer.footer {
       margin-bottom: 30px; }
       .blog-list-container .blog-list .blog > div {
         background-color: #FFF;
-        padding: 30px;
+        padding: 0px;
         border-radius: 2px;
         box-shadow: 0 1px 1px #CCC; }
         .blog-list-container .blog-list .blog > div .title {
           color: #444;
-          text-decoration: none; }
+          text-decoration: none;
+          padding: 30px;
+          flex-grow: 13;
+          flex-basis: 0; }
           .blog-list-container .blog-list .blog > div .title h4 {
-            color: #0B8389;
+            color: #EB4A4B;
             font-weight: 600;
             font-family: 'Lato', sans-serif; }
           .blog-list-container .blog-list .blog > div .title p {
+            color: #444;
             font-family: 'Lato', sans-serif; }
+          .blog-list-container .blog-list .blog > div .title .readmore {
+            font-size: 11px;
+            margin-top: 15px;
+            margin-bottom: 0; }
         .blog-list-container .blog-list .blog > div a:hover {
           text-decoration: none; }
-      .blog-list-container .blog-list .blog > div.thumbnail-min .thumbnail {
-        margin-right: 30px;
-        margin-bottom: 0;
-        float: left;
-        text-align: center;
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        border-radius: 2px;
-        border: 0; }
-        .blog-list-container .blog-list .blog > div.thumbnail-min .thumbnail img {
-          height: 100px;
-          width: auto; }
+      .blog-list-container .blog-list .blog > div.thumbnail-min {
+        display: flex;
+        align-items: stretch; }
+        .blog-list-container .blog-list .blog > div.thumbnail-min .thumbnail {
+          margin-bottom: 0;
+          text-align: center;
+          flex-grow: 2;
+          flex-basis: 0;
+          overflow: hidden;
+          border-radius: 0;
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border: 0;
+          position: relative;
+          display: block;
+          padding: 30px 15px;
+          background-color: #EB4A4B; }
+          .blog-list-container .blog-list .blog > div.thumbnail-min .thumbnail img {
+            height: auto;
+            width: 50px;
+            filter: brightness(5);
+            -webkit-filter: brightness(5); }
       .blog-list-container .blog-list .blog > div:after {
         position: relative;
         display: block;
@@ -358,7 +378,7 @@ footer.footer {
     color: #FFF; }
 
 .post-header {
-  padding: 150px 35px 35px;
+  padding: 180px 35px 35px;
   min-height: 400px;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -386,7 +406,8 @@ footer.footer {
   .post-container .post-content {
     font-size: 1.15em;
     margin-top: 25px;
-    line-height: 1.65em; }
+    line-height: 1.65em;
+    font-family: 'Lato', sans-serif; }
     .post-container .post-content p.indent {
       text-indent: 40px; }
     .post-container .post-content pre {
@@ -430,7 +451,8 @@ footer.footer {
         font-weight: bold;
         line-height: 15px;
         vertical-align: middle;
-        text-decoration: none; }
+        text-decoration: none;
+        border-radius: 2px; }
         .post-container .post-share-container .post-share a i {
           position: relative;
           display: block;
@@ -444,7 +466,7 @@ footer.footer {
           margin-bottom: 0; }
         .post-container .post-share-container .post-share a div.counter {
           display: inline-block;
-          margin-left: 5px;
+          margin-left: 10px;
           padding: 2px 5px;
           background-color: rgba(255, 255, 255, 0.1); }
       .post-container .post-share-container .post-share a.facebook {

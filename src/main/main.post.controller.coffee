@@ -21,6 +21,7 @@ angular.module "app"
         params.category_name = vm.selected_category
       params.page = vm.paging.page
       Post.getPosts(params).then (data) ->
+        console.log data
         vm.loadingData(data)
         vm.loading = false
 

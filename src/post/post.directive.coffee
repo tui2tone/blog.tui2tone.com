@@ -5,7 +5,7 @@ angular.module "app"
         if elm[0].textContent.trim() == ""
           elm.remove()
         else
-          hljs.highlightBlock(elm);
+          hljs.highlightBlock(elm[0]);
 
 angular.module "app"
   .directive 'compile', [
