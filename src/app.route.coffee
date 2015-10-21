@@ -30,7 +30,7 @@ angular.module "app"
         templateProvider: ($templateCache) ->
           $templateCache.get('main/posts.html')
       .state "post",
-        url: "/{year:[0-9]{4}}/{month:[0-9]{2}}/:slug/{id:[0-9]*}"
+        url: "/{year:[0-9]{4}}/{month:[0-9]{2}}/:slug/{id:[0-9]*}/"
         controller: "PostController"
         controllerAs: "post"
         templateProvider: ($templateCache) ->

@@ -8,8 +8,8 @@ angular.module "app"
           get_param_s.push(key + "=" + val)
         else
           get_param_s.push("filter[" + key + "]=" + val)
-          
-      $http.get('/wp-json/posts?' + get_param_s.join("&"))
+
+      $http.get($rootScope.WPAPI.api_url + '/posts?' + get_param_s.join("&"))
         .success (data) ->
           delay.resolve(data)
         .error () ->
@@ -18,7 +18,7 @@ angular.module "app"
 
     getPost = (id) ->
       delay = $q.defer()
-      $http.get('/wp-json/posts/' + id, {
+      $http.get($rootScope.WPAPI.api_url + '/posts/' + id, {
         headers: { 'X-WP-Nonce': $rootScope.api_nonce}
         })
         .success (data) ->

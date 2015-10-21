@@ -11,7 +11,7 @@ angular.module("app").factory("Post", ["$http", "$q", "$rootScope", function($ht
         return get_param_s.push("filter[" + key + "]=" + val);
       }
     });
-    $http.get('/wp-json/posts?' + get_param_s.join("&")).success(function(data) {
+    $http.get($rootScope.WPAPI.api_url + '/posts?' + get_param_s.join("&")).success(function(data) {
       return delay.resolve(data);
     }).error(function() {
       return delay.reject('Cannot load posts');
@@ -21,7 +21,7 @@ angular.module("app").factory("Post", ["$http", "$q", "$rootScope", function($ht
   getPost = function(id) {
     var delay;
     delay = $q.defer();
-    $http.get('/wp-json/posts/' + id, {
+    $http.get($rootScope.WPAPI.api_url + '/posts/' + id, {
       headers: {
         'X-WP-Nonce': $rootScope.api_nonce
       }

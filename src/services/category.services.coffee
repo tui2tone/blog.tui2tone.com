@@ -1,8 +1,8 @@
 angular.module "app"
-  .factory "Category", ($http,$q) ->
+  .factory "Category", ($http,$q,$rootScope) ->
     getCategories = ->
       delay = $q.defer()
-      $http.get('/wp-json/taxonomies/category/terms')
+      $http.get($rootScope.WPAPI.api_url + '/taxonomies/category/terms')
         .success (data) ->
           delay.resolve(data)
         .error () ->

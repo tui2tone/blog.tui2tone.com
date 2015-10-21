@@ -12,7 +12,7 @@
   <meta name="description" property="og:description" content="<?php do_action( 'echo_meta_description' ); ?>">
   <meta property="og:image" content="<?php do_action( 'echo_meta_thumbnail' ); ?>">
 
-	<base href="/">
+	<base href="/wordpress/">
 
 	<script type="text/javascript">
 		var $config = {

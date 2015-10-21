@@ -86,8 +86,8 @@ function run_production() {
 	add_action( 'wp_enqueue_scripts', 'app_script_minify' );
 }
 
-run_dev();
-// run_production();
+// run_dev();
+run_production();
 
 // Prerender Meta Tag
 // Get ID'

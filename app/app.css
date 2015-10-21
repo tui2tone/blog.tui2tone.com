@@ -348,6 +348,7 @@ footer.footer {
   left: 0;
   right: 0;
   width: 70px;
+  height: 70px;
   padding: 10px;
   text-align: center;
   z-index: 4000;
@@ -360,6 +361,10 @@ footer.footer {
   -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
   animation-duration: 0.3s; }
+  .loading-progress md-progress-circular {
+    position: absolute;
+    top: -16px;
+    left: -16px; }
   .loading-progress md-progress-circular.md-hue-2 .md-inner .md-gap {
     border-top-color: #55c34d;
     border-bottom-color: #55c34d; }
@@ -411,7 +416,7 @@ footer.footer {
     .post-container .post-content p.indent {
       text-indent: 40px; }
     .post-container .post-content pre {
-      border-radius: 0;
+      border-radius: 2px;
       padding: 0;
       background-color: #FFF; }
     .post-container .post-content code:not(.ng-high-light) {
@@ -420,6 +425,7 @@ footer.footer {
       font-size: 0.8em;
       padding: 2px 5px; }
     .post-container .post-content .hljs {
+      border-radius: 2px;
       padding: 15px; }
     .post-container .post-content .aligncenter {
       display: block;
