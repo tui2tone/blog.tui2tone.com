@@ -9,7 +9,6 @@
   background-position: center;
   margin-bottom: 0;
   text-align: center;
-
   img.logo {
     width: 150px;
     height: auto;
@@ -24,46 +23,44 @@
   .sidebar {
     display: block;
     position: relative;
-    padding: 45px 15px;
-  ul.blog-categories {
-    text-align: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 2px;
-    box-shadow: 0 1px 1px #CCC;
-    & > li {
-      display:block;
-      background-color: #FFF;
-      border-bottom: 1px solid #EEE;
-      -webkit-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
-
-      a {
+    padding: 60px 15px;
+    ul.blog-categories {
+      text-align: left;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-radius: 2px;
+      box-shadow: 0 1px 1px #ccc;
+      & > li {
         display: block;
-        padding: 12px 15px;
-        color: #212121;
-        font-family: 'Lato', sans-serif;
-        font-weight: 600;
-        font-size: 12px;
-        text-decoration: none;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        a {
+          display: block;
+          padding: 12px 15px;
+          color: #212121;
+          font-family: 'Lato', sans-serif;
+          font-weight: 600;
+          font-size: 12px;
+          text-decoration: none;
+        }
+      }
+      & > li:last-child {
+        border-bottom: 0 solid #eee;
+      }
+      & > li:hover {
+        cursor: pointer;
+        background-color: #fff;
+        border-left: 8px solid rgba(85,195,77,1);
       }
     }
-    & > li:last-child {
-      border-bottom: 0px solid #EEE;
-    }
-    & > li:hover {
-      cursor: pointer;
-      background-color: #FFF;
-      border-left: 8px solid rgba(85,195,77,1);
-    }
   }
-}
   .blog-list {
     display: block;
     position: relative;
-    padding: 45px 15px;
-
+    padding: 60px 15px;
     & > .title {
       font-family: 'Lato', sans-serif;
       margin-top: 0;
@@ -75,39 +72,38 @@
       display: block;
       animation-duration: 0.5s;
       margin-bottom: 30px;
-
       & > div {
-        background-color: #FFF;
-        padding: 0px;
+        background-color: #fff;
+        padding: 0;
         border-radius: 2px;
-        box-shadow: 0 1px 1px #CCC;
-
+        box-shadow: 0 1px 1px #ccc;
         .title {
           color: #444;
           text-decoration: none;
           padding: 30px;
           flex-grow: 13;
           flex-basis: 0;
-
           h4 {
-            color: #EB4A4B;
+            color: #eb4a4b;
             font-weight: 600;
+            font-size: 1.4em;
             font-family: 'Lato', sans-serif;
           }
-
           p {
             color: #444;
             font-family: 'Lato', sans-serif;
           }
-
           .readmore {
             font-size: 11px;
             margin-top: 15px;
             margin-bottom: 0;
+            color: #777;
           }
         }
-
         a:hover {
+          text-decoration: none;
+        }
+        a:focus {
           text-decoration: none;
         }
       }
@@ -127,13 +123,11 @@
           position: relative;
           display: block;
           padding: 30px 15px;
-          background-color: #EB4A4B;
-
+          background-color: #eb4a4b;
           img {
             height: auto;
             width: 70px;
           }
-
         }
       }
       & > div:after {
@@ -145,10 +139,12 @@
     }
   }
 }
-
 @media (max-width: 768px) {
   .blog-list-container {
     padding-bottom: 160px;
+    .blog-list {
+      padding: 30px 15px;
+    }
   }
 }
 .post-loading {
@@ -156,29 +152,38 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   margin-bottom: 30px;
-
   i {
     font-size: 20px;
     margin-bottom: 5px;
   }
 }
-
 .spin {
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 4000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
-
 @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
